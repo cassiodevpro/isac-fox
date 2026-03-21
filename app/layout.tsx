@@ -47,13 +47,24 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* Cabeçalho fixo com contatos e redes sociais */}
+        {/* Cabeçalho fixo com contatos, redes sociais e navegação */}
         <header className="w-full bg-black/90 py-2 px-4 flex flex-col items-center justify-center gap-2 border-b border-orange-500 z-50 sticky top-0">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-2">
-            <span className="text-orange-500 font-bold text-lg">FOX Engenharia</span>
-            <span className="text-zinc-200 text-sm ml-0 md:ml-4">Contato: <a href="tel:+5561984728861" className="text-orange-400 hover:underline">(61) 98472-8861</a></span>
-            <span className="text-zinc-200 text-sm ml-0 md:ml-4">Email: <a href="mailto:isacdesaengenheiro10@gmail.com" className="text-orange-400 hover:underline">isacdesaengenheiro10@gmail.com</a></span>
-            <span className="text-zinc-200 text-sm ml-0 md:ml-4">Brasília/DF</span>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2 w-full max-w-5xl mx-auto">
+            <div className="flex items-center gap-4">
+              <span className="flex items-center gap-2 select-none">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="19" cy="19" r="18" fill="#2563eb" stroke="#1e293b" strokeWidth="2"/>
+                  <text x="19" y="25" textAnchor="middle" fontSize="15" fontWeight="bold" fill="#fff" fontFamily="Arial, sans-serif">FOX</text>
+                </svg>
+                <span className="text-[#2563eb] font-extrabold text-xl tracking-wide drop-shadow-sm">Engenharia</span>
+              </span>
+              <a href="/galeria" className="text-orange-500 font-bold text-lg">Galeria</a>
+            </div>
+            <div className="flex flex-col md:flex-row items-center gap-2">
+              <span className="text-zinc-200 text-sm">Contato: <a href="tel:+5561984728861" className="text-orange-400 hover:underline">(61) 98472-8861</a></span>
+              <span className="text-zinc-200 text-sm ml-0 md:ml-4">Email: <a href="mailto:isacdesaengenheiro10@gmail.com" className="text-orange-400 hover:underline">isacdesaengenheiro10@gmail.com</a></span>
+              <span className="text-zinc-200 text-sm ml-0 md:ml-4">Brasília/DF</span>
+            </div>
           </div>
           <div className="flex items-center justify-center gap-3 mt-2 md:mt-0">
             <a href="https://instagram.com/foxengenharia.fake" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-orange-500 text-zinc-200 text-xl">
